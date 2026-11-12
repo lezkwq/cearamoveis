@@ -4,11 +4,45 @@ import { Star } from "lucide-react";
 import { SiteHeader } from "@/components/site/header";
 import { Hero } from "@/components/site/hero";
 import { Reveal, RevealImage } from "@/components/site/reveal";
+import ImageGallery, { type EditorialGalleryImage } from "@/components/ui/image-gallery";
 import { photos, whatsapp, instagramUrl, phoneLabel, phoneNumber } from "@/lib/jem";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
+
+const desktopProjectImages: readonly EditorialGalleryImage[] = [
+  {
+    src: photos.cozinhaCristaleira,
+    alt: "Cozinha com cristaleira iluminada e península",
+    objectPosition: "32% 60%",
+  },
+  {
+    src: photos.closetMadeira,
+    alt: "Closet amadeirado com cabideiros, prateleiras e gavetas",
+    objectPosition: "50% 50%",
+  },
+  {
+    src: photos.salaRipado,
+    alt: "Sala de estar integrada com teto e painel ripados",
+    objectPosition: "60% 53%",
+  },
+  {
+    src: photos.dormitorio,
+    alt: "Dormitório com armário espelhado e nichos iluminados",
+    objectPosition: "41% 45%",
+  },
+  {
+    src: photos.painelClaro,
+    alt: "Painel de TV claro com nichos iluminados e rack suspenso",
+    objectPosition: "65% 50%",
+  },
+  {
+    src: photos.jantarIntegrado,
+    alt: "Sala de jantar com banco estofado integrada à cozinha",
+    objectPosition: "55% 60%",
+  },
+];
 
 const etapas = [
   { n: "01", t: "Conversa e briefing", d: "Entender ambiente, uso, medidas e referências." },
@@ -94,7 +128,9 @@ function Index() {
               </h2>
             </Reveal>
 
-            <div className="mt-14 grid gap-4 md:mt-24 md:grid-cols-12 md:gap-6">
+            <ImageGallery images={desktopProjectImages} className="mt-24" />
+
+            <div className="mt-14 grid gap-4 md:mt-24 md:hidden md:grid-cols-12 md:gap-6">
               <figure className="md:col-span-8">
                 <RevealImage
                   src={photos.cozinhaCristaleira}
