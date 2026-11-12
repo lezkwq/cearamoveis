@@ -21,11 +21,13 @@ const desktopProjectImages: readonly EditorialGalleryImage[] = [
     src: photos.closetMadeira,
     alt: "Closet amadeirado com cabideiros, prateleiras e gavetas",
     objectPosition: "50% 50%",
+    maxExpandedAspectRatio: 937 / 1678,
   },
   {
     src: photos.salaRipado,
     alt: "Sala de estar integrada com teto e painel ripados",
     objectPosition: "60% 53%",
+    maxExpandedAspectRatio: 943 / 1668,
   },
   {
     src: photos.dormitorio,
