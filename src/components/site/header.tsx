@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { whatsapp } from "@/lib/jem";
+import { whatsapp } from "@/lib/ceara";
 
 const links = [
   { label: "Projetos", href: "#projetos" },
@@ -29,8 +29,8 @@ export function SiteHeader() {
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 md:px-10 md:py-6">
         <a href="#top" className="flex items-center justify-start min-w-0">
           <img
-            src="/imagens/logo-jem.png"
-            alt="J & M Móveis Planejados"
+            src="/imagens/logo-ceara.png"
+            alt="Ceará Móveis Sob Medida"
             className="h-11 w-auto max-w-[180px] object-contain"
           />
         </a>

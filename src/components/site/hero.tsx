@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ImageTrail } from "@/components/ui/image-trail";
-import { photos, whatsapp } from "@/lib/jem";
+import { photos, whatsapp } from "@/lib/ceara";
 
 const trailImages: { src: string; width: number; ratio: string; position: string; alt: string }[] =
   [
@@ -61,9 +61,9 @@ export function Hero() {
         >
           <span
             className="block font-editorial leading-[0.86] tracking-[-0.02em]"
-            style={{ fontSize: "clamp(3.6rem, 11vw, 11rem)" }}
+            style={{ fontSize: "clamp(2.8rem, 10vw, 11rem)" }}
           >
-            J &amp; M
+            Ceará Móveis
           </span>
           <span className="label-tech mt-6 block text-muted-foreground md:mt-10">
             <span className="block">Seu sonho,</span>
@@ -78,7 +78,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            Há 15 anos transformando espaços com móveis sob medida em Navegantes, SC.
+            Móveis planejados para o seu espaço e a sua rotina em Navegantes, SC.
           </motion.p>
           <motion.a
             href={whatsapp.geral}
@@ -97,7 +97,7 @@ export function Hero() {
         <div className="mt-12 grid grid-cols-5 gap-3 md:hidden">
           <motion.img
             src={photos.cozinhaBalcao}
-            alt="Cozinha sob medida com balcão e iluminação embutida"
+            alt="Cozinha sob medida com balcão ripado e bancada escura"
             className="col-span-3 aspect-[4/5] w-full max-w-full object-cover"
             style={{ objectPosition: "72% 50%" }}
             initial={{ opacity: 0, y: 18 }}
@@ -106,7 +106,7 @@ export function Hero() {
           />
           <motion.img
             src={photos.closetMadeira}
-            alt="Closet amadeirado com prateleiras e gavetas"
+            alt="Armário com portas espelhadas e gavetas"
             className="col-span-2 mt-10 aspect-[3/4] w-full max-w-full object-cover"
             style={{ objectPosition: "55% 55%" }}
             initial={{ opacity: 0, y: 18 }}

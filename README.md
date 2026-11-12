@@ -1,6 +1,6 @@
-# J & M Móveis Planejados
+# Ceará Móveis Sob Medida
 
-Site institucional da J & M Móveis Planejados, de Navegantes, SC.
+Site institucional da Ceará Móveis Sob Medida, de Navegantes, SC.
 
 ## Desenvolvimento
 

@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site/header";
 import { Hero } from "@/components/site/hero";
 import { Reveal, RevealImage } from "@/components/site/reveal";
 import ImageGallery, { type EditorialGalleryImage } from "@/components/ui/image-gallery";
-import { photos, whatsapp, instagramUrl, phoneLabel, phoneNumber } from "@/lib/jem";
+import { photos, whatsapp, instagramUrl, mapsUrl, phoneLabel, phoneNumber } from "@/lib/ceara";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,34 +14,34 @@ export const Route = createFileRoute("/")({
 const desktopProjectImages: readonly EditorialGalleryImage[] = [
   {
     src: photos.cozinhaCristaleira,
-    alt: "Cozinha com cristaleira iluminada e península",
+    alt: "Cozinha com armários espelhados, cooktop e bancada branca",
     objectPosition: "32% 60%",
   },
   {
     src: photos.closetMadeira,
-    alt: "Closet amadeirado com cabideiros, prateleiras e gavetas",
+    alt: "Armário com portas espelhadas e gavetas no dormitório",
     objectPosition: "50% 50%",
     maxExpandedAspectRatio: 937 / 1678,
   },
   {
     src: photos.salaRipado,
-    alt: "Sala de estar integrada com teto e painel ripados",
+    alt: "Sala com painel espelhado, rack amadeirado e iluminação embutida",
     objectPosition: "60% 53%",
     maxExpandedAspectRatio: 943 / 1668,
   },
   {
     src: photos.dormitorio,
-    alt: "Dormitório com armário espelhado e nichos iluminados",
+    alt: "Dormitório com cabeceira estofada e mesas laterais",
     objectPosition: "41% 45%",
   },
   {
     src: photos.painelClaro,
-    alt: "Painel de TV claro com nichos iluminados e rack suspenso",
+    alt: "Painel ripado com iluminação linear e rack com portas brancas",
     objectPosition: "65% 50%",
   },
   {
     src: photos.jantarIntegrado,
-    alt: "Sala de jantar com banco estofado integrada à cozinha",
+    alt: "Mesa de jantar e bancada com banquetas em varanda integrada",
     objectPosition: "55% 60%",
   },
 ];
@@ -55,11 +55,18 @@ const etapas = [
 
 const avaliacoes = [
   {
-    texto: "Atendimento muito bom, e cumpriram o prazo de entrega :)",
-    autor: "Tatiane Ferreira Anacleto",
+    texto:
+      "Excelente. Fizemos uma escrivaninha e um balcão pro fogão cooktop. Móveis de qualidade e entregou em 2 dias. Recomendo!",
+    autor: "Rafaela Dutra",
   },
-  { texto: "Top ,melhor local preço justo", autor: "Gleydson Cassiano" },
-  { texto: "Excelente . Super indico ..", autor: "Maria Lopes" },
+  {
+    texto: "Excelente trabalho. Entrega no prazo, comprometimento e excelência.",
+    autor: "ceara queiroz",
+  },
+  {
+    texto: "Porque a minha mãe trabalha ai e o meu pai",
+    autor: "Carol Lopes",
+  },
 ];
 
 function Index() {
@@ -75,7 +82,7 @@ function Index() {
             <div className="grid gap-12 md:grid-cols-12 md:gap-16">
               <RevealImage
                 src={photos.integrado}
-                alt="Sala de jantar com adega e cristaleira planejadas"
+                alt="Cozinha clara integrada à sala de jantar"
                 className="md:col-span-7 aspect-[4/5] md:aspect-[4/3]"
                 position="60% 50%"
                 eager
@@ -83,15 +90,15 @@ function Index() {
               <div className="md:col-span-5 md:pt-6">
                 <Reveal>
                   <h2 className="display-lg text-foreground">
-                    Há 15 anos
+                    Móveis sob medida
                     <br />
-                    transformando espaços.
+                    para o dia a dia.
                   </h2>
                 </Reveal>
                 <Reveal delay={0.1}>
                   <p className="mt-8 max-w-[46ch] leading-relaxed text-muted-foreground">
-                    A J &amp; M Móveis Planejados cria móveis sob medida em Navegantes, SC. Cada
-                    projeto parte das medidas do ambiente e das necessidades de quem vai usá-lo.
+                    A Ceará Móveis cria móveis sob medida em Navegantes, SC. Cada projeto parte das
+                    medidas do ambiente e das necessidades de quem vai usá-lo.
                   </p>
                 </Reveal>
               </div>
@@ -99,8 +106,8 @@ function Index() {
 
             <div className="mt-20 grid border-t border-border md:mt-28 md:grid-cols-3">
               {[
-                { v: "15 anos", l: "No mercado" },
-                { v: "5,0 / 5", l: "5 avaliações no Google" },
+                { v: "Sob medida", l: "Móveis planejados" },
+                { v: "4,9 / 5", l: "10 avaliações no Google" },
                 { v: "Navegantes", l: "Santa Catarina" },
               ].map((item, i) => (
                 <Reveal
@@ -126,7 +133,7 @@ function Index() {
               <h2 className="display-lg mt-6 text-foreground">
                 Projetos
                 <br />
-                que saíram do papel.
+                para diferentes ambientes.
               </h2>
             </Reveal>
 
@@ -136,7 +143,7 @@ function Index() {
               <figure className="md:col-span-8">
                 <RevealImage
                   src={photos.cozinhaCristaleira}
-                  alt="Cozinha com cristaleira iluminada e península"
+                  alt="Cozinha com armários espelhados, cooktop e bancada branca"
                   className="aspect-[4/5] md:aspect-[16/10]"
                   position="50% 62%"
                 />
@@ -145,7 +152,7 @@ function Index() {
               <figure className="md:col-span-4 md:pt-16">
                 <RevealImage
                   src={photos.closetMadeira}
-                  alt="Closet amadeirado com cabideiros, prateleiras e gavetas"
+                  alt="Armário com portas espelhadas e gavetas no dormitório"
                   className="aspect-[3/4]"
                   position="50% 32%"
                 />
@@ -154,7 +161,7 @@ function Index() {
               <figure className="md:col-span-7">
                 <RevealImage
                   src={photos.salaRipado}
-                  alt="Sala de estar integrada com teto e painel ripados"
+                  alt="Sala com painel espelhado, rack amadeirado e iluminação embutida"
                   className="aspect-[4/5] md:aspect-[16/10]"
                   position="45% 58%"
                 />
@@ -163,7 +170,7 @@ function Index() {
               <figure className="md:col-span-5 md:pt-20">
                 <RevealImage
                   src={photos.dormitorio}
-                  alt="Dormitório com armário espelhado e nichos iluminados"
+                  alt="Dormitório com cabeceira estofada e mesas laterais"
                   className="aspect-[4/5]"
                   position="52% 45%"
                 />
@@ -174,7 +181,7 @@ function Index() {
               <figure className="md:col-span-4 md:col-start-2">
                 <RevealImage
                   src={photos.painelClaro}
-                  alt="Painel de TV claro com nichos iluminados e rack suspenso"
+                  alt="Painel ripado com iluminação linear e rack com portas brancas"
                   className="aspect-[4/5]"
                   position="42% 50%"
                 />
@@ -183,7 +190,7 @@ function Index() {
               <figure className="md:col-span-5 md:pt-12">
                 <RevealImage
                   src={photos.cozinhaEspelhada}
-                  alt="Cozinha com armários espelhados e eletrodomésticos embutidos"
+                  alt="Cozinha com balcão ripado e eletrodomésticos embutidos"
                   className="aspect-[4/3]"
                   position="60% 50%"
                 />
@@ -192,7 +199,7 @@ function Index() {
               <figure className="md:col-span-7">
                 <RevealImage
                   src={photos.cozinhaCompacta}
-                  alt="Cozinha compacta com móveis claros e nichos iluminados"
+                  alt="Cozinha clara com armários lineares e revestimento branco"
                   className="aspect-[4/5] md:aspect-[16/10]"
                   position="55% 62%"
                 />
@@ -201,7 +208,7 @@ function Index() {
               <figure className="md:col-span-5 md:pt-16">
                 <RevealImage
                   src={photos.jantarIntegrado}
-                  alt="Sala de jantar com banco estofado integrada à cozinha"
+                  alt="Mesa de jantar e bancada com banquetas em varanda integrada"
                   className="aspect-[4/5] md:aspect-[4/3]"
                   position="55% 60%"
                 />
@@ -245,7 +252,7 @@ function Index() {
             </div>
             <RevealImage
               src={photos.bancadaPreta}
-              alt="Cozinha em L com bancada preta e iluminação sob os armários"
+              alt="Cozinha com bancada preta, balcão ripado e armários espelhados"
               className="md:col-span-7 aspect-[4/5] md:aspect-[3/2]"
               position="55% 55%"
             />
@@ -255,16 +262,18 @@ function Index() {
             <figure className="md:col-span-4 md:col-start-3">
               <RevealImage
                 src={photos.cantinhoCafe}
-                alt="Cantinho do café com nicho em arco e portas de vidro canelado"
+                alt="Gabinete com frentes molduradas e puxadores quadrados"
                 className="aspect-[4/3]"
                 position="50% 42%"
               />
-              <figcaption className="label-tech mt-3 text-warmgray">Cantinho do café</figcaption>
+              <figcaption className="label-tech mt-3 text-warmgray">
+                Detalhe de acabamento
+              </figcaption>
             </figure>
             <figure className="md:col-span-3 md:col-start-8 md:pt-16">
               <RevealImage
                 src={photos.painelEscuro}
-                alt="Painel de TV ripado com iluminação embutida e rack suspenso"
+                alt="Painel de TV branco com fundo ripado, iluminação embutida e rack suspenso"
                 className="aspect-[3/4]"
                 position="50% 50%"
               />
@@ -325,7 +334,7 @@ function Index() {
           <div className="mx-auto grid w-full max-w-[1440px] gap-12 px-5 md:grid-cols-12 md:items-center md:gap-16 md:px-10">
             <RevealImage
               src={photos.cozinhaLinear}
-              alt="Cozinha linear com nicho amadeirado e bancada preta"
+              alt="Varanda com bancada planejada e mesa de jantar"
               className="md:col-span-7 aspect-[4/3]"
               position="45% 50%"
             />
@@ -364,20 +373,20 @@ function Index() {
               <div className="md:col-span-5 md:pt-10">
                 <Reveal>
                   <h2 className="display-lg text-foreground">
-                    Sobre a J &amp; M
+                    Sobre a
                     <br />
-                    Móveis Planejados.
+                    Ceará Móveis.
                   </h2>
                 </Reveal>
                 <Reveal delay={0.1}>
                   <p className="mt-8 max-w-[46ch] leading-relaxed text-muted-foreground">
-                    A J &amp; M é uma empresa de empreendedoras de Navegantes, SC. Há 15 anos,
-                    transforma espaços com móveis planejados para o dia a dia de cada cliente.
+                    A Ceará Móveis atende em Navegantes, SC, com móveis planejados para cozinhas,
+                    salas, quartos e outros ambientes da casa.
                   </p>
                 </Reveal>
                 <Reveal delay={0.16}>
                   <p className="label-tech mt-10 text-muted-foreground">
-                    <span className="block">Empresa de empreendedoras.</span>
+                    <span className="block">Projetos personalizados.</span>
                     <span className="block">Móveis sob medida.</span>
                     <span className="block">Navegantes, SC.</span>
                   </p>
@@ -385,7 +394,7 @@ function Index() {
               </div>
               <RevealImage
                 src={photos.quartoMadeira}
-                alt="Quarto com armários amadeirados em torno da cama"
+                alt="Quarto com escrivaninha, nichos e gavetas em azul-petróleo"
                 className="md:col-span-7 aspect-[4/5] md:aspect-[4/3]"
                 position="50% 30%"
               />
@@ -413,7 +422,7 @@ function Index() {
               <Reveal delay={0.1} className="md:col-span-5">
                 <div className="flex items-baseline gap-4">
                   <p className="font-editorial text-[clamp(2.2rem,3.4vw,3.2rem)] text-foreground">
-                    5,0 / 5
+                    4,9 / 5
                   </p>
                   <span className="flex gap-1 text-taupe" aria-hidden="true">
                     {Array.from({ length: 5 }).map((_, i) => (
@@ -421,7 +430,7 @@ function Index() {
                     ))}
                   </span>
                 </div>
-                <p className="label-tech mt-3 text-muted-foreground">5 avaliações no Google</p>
+                <p className="label-tech mt-3 text-muted-foreground">10 avaliações no Google</p>
               </Reveal>
             </div>
 
@@ -442,24 +451,26 @@ function Index() {
           </div>
         </section>
 
-        {/* FACHADA */}
+        {/* LOCALIZAÇÃO */}
         <section className="w-full border-t border-border bg-offwhite py-20 md:py-28">
           <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-5 md:grid-cols-12 md:items-end md:gap-16 md:px-10">
             <RevealImage
-              src={photos.fachada}
-              alt="Fachada da J & M Móveis Planejados em Navegantes, SC"
+              src={photos.painelEntrada}
+              alt="Painel ripado branco com banco e iluminação embutida no hall de entrada"
               className="md:col-span-8 aspect-[4/3] md:aspect-[16/9]"
               imgClassName="md:origin-left md:scale-[1.2]"
               position="left center"
             />
             <Reveal delay={0.1} className="md:col-span-4">
-              <p className="label-tech text-muted-foreground">Onde fica a J &amp; M</p>
+              <p className="label-tech text-muted-foreground">Onde fica a Ceará Móveis</p>
               <address className="mt-6 not-italic leading-relaxed text-foreground">
-                R. João Hercílio da Luz, 216
-                <br />
-                São Pedro
-                <br />
-                Navegantes, SC · 88370-025
+                <a href={mapsUrl} target="_blank" rel="noreferrer" className="hover:underline">
+                  R. José Luiz Maximo Pereira, 285
+                  <br />
+                  São Domingos
+                  <br />
+                  Navegantes, SC · 88375-000
+                </a>
               </address>
             </Reveal>
           </div>
@@ -477,7 +488,7 @@ function Index() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-10 max-w-[42ch] leading-relaxed text-warmgray">
-                Conte para a J &amp; M o que você está planejando.
+                Conte para a Ceará Móveis o que você está planejando.
               </p>
               <a
                 href={whatsapp.geral}
@@ -497,22 +508,20 @@ function Index() {
       <footer className="w-full bg-offwhite py-16 md:py-20">
         <div className="mx-auto grid w-full max-w-[1440px] gap-12 px-5 md:grid-cols-12 md:px-10">
           <div className="md:col-span-4">
-            <p className="font-editorial text-2xl text-foreground">J &amp; M</p>
+            <p className="font-editorial text-2xl text-foreground">Ceará Móveis</p>
             <p className="label-tech mt-2 text-muted-foreground">Móveis Planejados</p>
           </div>
           <address className="not-italic md:col-span-3">
             <p className="leading-relaxed text-muted-foreground">
-              R. João Hercílio da Luz, 216
+              R. José Luiz Maximo Pereira, 285
               <br />
-              São Pedro
+              São Domingos
               <br />
-              Navegantes, SC · 88370-025
+              Navegantes, SC · 88375-000
             </p>
           </address>
           <div className="md:col-span-2">
             <p className="leading-relaxed text-muted-foreground">
-              Aberto 24 horas
-              <br />
               <a href={`tel:${phoneNumber}`} className="hover:text-foreground">
                 {phoneLabel}
               </a>
@@ -524,7 +533,7 @@ function Index() {
                 href={instagramUrl}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram da J &amp; M"
+                aria-label="Instagram da Ceará Móveis"
                 className="text-foreground transition-colors hover:text-taupe"
               >
                 <FaInstagram className="size-5" />
@@ -533,7 +542,7 @@ function Index() {
                 href={whatsapp.geral}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp da J &amp; M"
+                aria-label="WhatsApp da Ceará Móveis"
                 className="text-foreground transition-colors hover:text-taupe"
               >
                 <FaWhatsapp className="size-5" />
@@ -551,7 +560,7 @@ function Index() {
         </div>
         <div className="mx-auto mt-14 w-full max-w-[1440px] border-t border-border px-5 pt-6 md:px-10">
           <p className="label-tech text-muted-foreground">
-            J &amp; M Móveis Planejados, Navegantes, SC
+            Ceará Móveis Sob Medida, Navegantes, SC
           </p>
         </div>
       </footer>

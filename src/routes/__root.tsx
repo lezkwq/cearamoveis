@@ -79,11 +79,11 @@ const getSiteOrigin = createServerFn({ method: "GET" }).handler(
   () => getRequestUrl({ xForwardedHost: true, xForwardedProto: true }).origin,
 );
 
-const siteName = "J & M Móveis Planejados";
+const siteName = "Ceará Móveis Sob Medida";
 const title = siteName + " | Navegantes, SC";
 const description =
-  "Há 15 anos transformando espaços com móveis sob medida em Navegantes, SC. Conheça os projetos da J & M e solicite um orçamento.";
-const socialImageAlt = "J & M Móveis Planejados e cozinha com cristaleira iluminada";
+  "Móveis planejados para cozinhas, salas e quartos em Navegantes, SC. Conheça os projetos da Ceará Móveis e solicite um orçamento.";
+const socialImageAlt = "Ceará Móveis Sob Medida e cozinha planejada com bancada branca";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   loader: () => getSiteOrigin(),
